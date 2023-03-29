@@ -24,12 +24,12 @@ router.post('/register', (req, res) => {
 
             var backoldPath = files.photoback.filepath
             var backnewPath = config.PhotoDir + '/' + photobackName + ".jpg"
-            fs.copyFile(frontoldPath, frontnewPath, function (err) { //Di chuyển file ảnh CMND mặt trước
-                if (err) throw err;
-            });
-            fs.copyFile(backoldPath, backnewPath, function (err) { //Di chuyển file ảnh CMND mặt sau
-                if (err) throw err;
-            });
+            // fs.copyFile(frontoldPath, frontnewPath, function (err) { //Di chuyển file ảnh CMND mặt trước
+            //     if (err) throw err;
+            // });
+            // fs.copyFile(backoldPath, backnewPath, function (err) { //Di chuyển file ảnh CMND mặt sau
+            //     if (err) throw err;
+            // });
 
             var newusername = utils.generate_username(9) // Tạo username
             var newpassword = utils.generate_password(6) // Tạo password
