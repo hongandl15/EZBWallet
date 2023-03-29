@@ -63,7 +63,11 @@ app.engine('handlebars', hbs.engine({
     layoutsDir: path.join(__dirname, "views/Layouts")
 }))
 app.use(express.urlencoded())
-app.use(session({ secret: 'fafsdhalj' }))
+app.use(session({ 
+    secret: 'fafsdhalj' ,
+    resave: true,
+    saveUninitialized: true,
+}))
 app.set('view engine', 'handlebars')
 app.use(express.static(path.join(__dirname, './public')));
 
