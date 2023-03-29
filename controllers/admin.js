@@ -1,6 +1,6 @@
 const express = require('express')
 var router = express.Router();
-const Transaction = require('../models/Transaction.js')
+const Transaction = require('../models/transaction.js')
 const User = require('../models/user.js')
 const nodemailer =  require('nodemailer');
 // Router admin
