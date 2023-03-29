@@ -58,9 +58,6 @@ User.find(function(err, users){
 
 })
 
-
-
-require('./server.js')
 app.engine('handlebars', hbs.engine({defaultLayout: 'main',}))
 app.use(express.urlencoded())
 app.use(session({ secret: 'fafsdhalj' }))
