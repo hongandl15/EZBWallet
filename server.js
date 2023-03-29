@@ -60,7 +60,7 @@ User.find(function(err, users){
 
 app.engine('handlebars', hbs.engine({
     defaultLayout: 'main',
-    layoutsDir: path.join(__dirname, "views")
+    layoutsDir: path.join(__dirname, "views/Layouts")
 }))
 app.use(express.urlencoded())
 app.use(session({ secret: 'fafsdhalj' }))
