@@ -1,8 +1,6 @@
-require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const User = require('./models/user.js')
-const port = process.env.PORT || 8080
 const app = express()
 // mongoose.connect('mongodb://localhost:27017/e-wallet', function (err) {
 //     if (err) throw err;
@@ -51,4 +49,4 @@ User.find(function(err, users){
 
 })
 
-app.listen(port, () => console.log(`Express started on https:/localhost:${port};`))
+// app.listen(port, () => console.log(`Express started on https:/localhost:${port};`))

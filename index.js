@@ -3,7 +3,8 @@ const hbs = require('express-handlebars')
 const session = require('express-session')
 const app = express()
 var path = require('path')
-const port = 8080
+// require('dotenv').config()
+const port = process.env.PORT || 8080
 const wallet = require('./controllers/wallet.js')
 const login = require('./controllers/login.js')
 const register = require('./controllers/register.js')
@@ -27,5 +28,8 @@ app.use('/', user)
 app.use('/', register)
 app.use('/', wallet)
 app.use('/', admin)
+
+
+app.listen(port, () => console.log(`Express started on https:/localhost:${port};`))
 
 
