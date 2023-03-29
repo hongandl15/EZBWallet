@@ -64,7 +64,7 @@ app.engine('handlebars', hbs.engine({
 }))
 app.use(express.urlencoded())
 app.use(session({ 
-    secret: 'fafsdhalj' ,
+    secret: 'fafsdhalj',
     resave: true,
     saveUninitialized: true,
 }))
