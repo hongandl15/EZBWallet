@@ -3,7 +3,6 @@ const hbs = require('express-handlebars')
 const session = require('express-session')
 const app = express()
 var path = require('path')
-// require('dotenv').config()
 const port = process.env.PORT || 8080
 const wallet = require('./controllers/wallet.js')
 const login = require('./controllers/login.js')
