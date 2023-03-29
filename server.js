@@ -1,8 +1,8 @@
-// require('dotenv').config()
+require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const User = require('./models/user.js')
-const port = 8080
+const port = process.env.PORT || 8080
 const app = express()
 // mongoose.connect('mongodb://localhost:27017/e-wallet', function (err) {
 //     if (err) throw err;
