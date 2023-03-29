@@ -10,7 +10,7 @@ const register = require('./controllers/register.js')
 const admin = require('./controllers/admin.js')
 const user = require('./controllers/user.js')
 
-require('./db.js')
+require('./server.js')
 app.engine('handlebars', hbs.engine({defaultLayout: 'main',}))
 app.use(express.urlencoded())
 app.use(session({ secret: 'fafsdhalj' }))
@@ -29,4 +29,3 @@ app.use('/', wallet)
 app.use('/', admin)
 
 
-app.listen(port, () => console.log(`Express started on https:/localhost:${port};`))
