@@ -1,0 +1,21 @@
+
+<div class="p-5 mt-5 w-75">
+  <h1 class=""> <img src="/assets/user.png"></img>RECOVERY CODE</h1>
+  <h5 class="mb-5" style="color:#58E1FF">Mã xác thực đã được gửi qua email của bạn</h5>
+    <h4 class="modal-title"></h4>
+    <form method="post" action="/recoverypassword">
+        <div class="form-group">
+            <label for="otp">Mã xác thực</label>
+            <input required class="form-control" type="text" id="otp" name="otp">
+        </div>
+        {{#if error}}
+        <div class="alert alert-danger">
+          {{error}}
+        </div>
+        {{/if}}
+        <div class="form-group">
+          <button style="background-color:#58E1FF; border:none; border-radius:10px" class="btn btn-success mr-2 w-100">Okay</button>
+      </div>
+    </form>
+</div>
+

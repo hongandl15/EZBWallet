@@ -1,0 +1,35 @@
+<div class="col-sm-6">
+  <form method="post" action="/transfer">
+    <h1 class="text-primary"><i class="fas fa-coins"></i></i> Chuyển tiền</h1>
+    <div class="form-group row">
+      <label for="phone" class="col-sm-4 col-form-label"><strong>SĐT người nhận</strong></label>
+      <input class="form-control col-sm-5" type="text" placeholder="Nhập SĐT người nhận" id="phone" name="phone">
+    </div>
+    <div class="form-group row">
+      <label for="money" class="col-sm-4 col-form-label"><strong>Số tiền muốn chuyển</strong></label>
+      <input class="form-control col-sm-5" type="number" placeholder="Nhập số tiền muốn chuyển" id="money" name="money">
+    </div>
+    <div class="form-group row">
+      <label for="note" class="col-sm-4 col-form-label"><strong>Ghi chú</strong></label>
+      <textarea class="form-control col-sm-5" type="text" placeholder="Nhập ghi chú" id="note" name="note" rows="3"></textarea>
+    </div>
+    <div class="form-group row">
+      <p class="col-sm-4 col-form-label">Phí chuyển tiền: <strong>5%</strong></p>
+    </div>
+    {{#if error}}
+    <div class="form-group row">
+      <div class="alert alert-danger alert-dismissible fade show col-sm-10 col-form-label">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{error}}
+      </div>
+    </div>
+    {{/if}}
+    <div class="form-group row">
+      <input checked type="radio" id="sender" name="who_pay" value="sender">
+      <label for="sender" class="col-sm-4 col-form-label">Người chuyển trả</label>
+      <input type="radio" id="receiver" name="who_pay" value="receiver">
+      <label for="receiver" class="col-sm-4 col-form-label">Người nhận trả</label>
+    </div>
+    <button class="btn btn-primary">Chuyển tiền</button>
+  </form>
+</div>

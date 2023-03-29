@@ -1,0 +1,59 @@
+<div class="col-sm-6">
+    <h2 class="text-center">Xin chào <strong>{{user.fullname}}</strong></h2><br>
+    <h4 class="text-center">Số dư tài khoản <a id ="money">{{user.balance}}<a></h4>
+    {{#if error}}
+    <div class="form-group">
+        <div id="error" class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{error}}
+        </div>
+    </div>
+    {{/if}}
+
+    {{#if success}}
+    <div class="form-group">
+        <div id="success" class="alert alert-success alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{success}}
+        </div>
+    </div>
+    {{/if}}
+
+    {{#if warning}}
+    <div class="form-group">
+        <div id="warning" class="alert alert-warning alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{warning}}
+        </div>
+    </div>
+    {{/if}}
+    <div class="d-flex flex-wrap justify-content-center">
+        {{#if user}}
+        <a class="m-6 menu-title" href="/deposit" style="text-decoration: none">
+            <div>
+                <img src="./assets/deposit.png" alt="">
+                <div>Nạp tiền</div>
+            </div>
+        </a>
+        <a class="m-6 menu-title" href="/withdraw">
+            <div>
+                <img src="./assets/withdraw.png" alt="">
+                <div >Rút tiền</div>
+            </div>
+        </a>
+        <a class="m-6 menu-title" href="/transfer">
+            <div>
+                <img src="./assets/transfer.png" alt="">
+                <div>Chuyển tiền</div>
+            </div>
+        </a>
+        <a class="m-6 menu-title" href="/buycard">
+            <div>
+                <img src="./assets/buycard.png" alt="">
+                <div>Mua thẻ điện thoại</div>
+            </div>
+        </a>
+        {{/if}}
+    </div>
+</div>
+

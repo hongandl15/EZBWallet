@@ -1,0 +1,47 @@
+<div class="col-sm-3 col-md-5 col-lg-2">
+<div class="card" class="w-100">
+    <div class="card-body">
+        <h4 class="card-title text-primary">{{fullname}}</h4>
+        <p class="card-text">User name: <strong>{{username}}</strong></p>
+        <p class="card-text">SĐT: <strong>{{phone}}</strong></p>
+        <p class="card-text">Địa chỉ: <strong>{{address}}</strong></p>
+        <p class="card-text">Ngày sinh: <strong>{{Birthdate}}</strong></p>
+        <p class="card-text">Số dư tài khoản: <strong id='money'>{{balance}}</strong></p>
+        <p class="card-text">Trạng thái: <strong>{{status}}</strong></p>
+
+        <button class="btn btn-success mr-2"><a href="/changepassword" style="color: white">Đổi mật khẩu</a></button>
+    </div>
+</div>
+<p class="mt-3"><a href="/">Quay lại</a></p>
+</div>
+
+{{!-- {{#if idcard}} --}}
+<div class="col-sm-3 col-md-5 col-lg-3 d-flex justify-content-center">
+    <form class="mt-3" role="form" enctype="multipart/form-data" action="/addID" method="post">
+        <div>
+            <img width="400px" height="300px" src='/photo/{{idcard.photofrontName}}.jpg' alt={{idcard.photofrontName}} />    
+        </div>
+        <div class="form-group">
+                <label for="photofront">Ảnh CMND mặt trước</label>
+                {{#if addidcard}}
+                <input type="file" class="form-control"  accept="image/*" id="photofront" name="photofront">
+                 {{/if}}
+        </div>
+
+        <div>
+            <img width="400px" height="300px" src='/photo/{{idcard.photobackName}}.jpg' alt={{idcard.photobackName}} />          
+        </div>
+        <div class="form-group">
+            <label for="photoback">Ảnh CMND mặt sau</label>
+            {{#if addidcard}}
+            <input type="file" class="form-control"  accept="image/*" id="photoback" name="photoback">
+             {{/if}}
+        </div>
+    {{#if addidcard}}
+        <div class="form-group">
+            <button type="submit" class="btn btn-success mr-2">Bổ sung</button>
+        </div>
+    {{/if}}
+    </form>
+</div>
+{{!-- {{/if}}  --}}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>EZB Wallet | {{{title}}}</title>
+  <link rel="icon" href="./assets/logoweb.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <!-- Top Nav Bar -->
+  <nav class="top-nav navbar navbar-expand-lg navbar-light mb-5">
+    <a href="/"><img src="/assets/logo.png" ></a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Trang chủ</a>
+        </li>
+        <li class="nav-item dropdown" >
+          <a class="nav-link"id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Quản lí tài khoản
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/admin/users/unverified"><i class="fas fa-user-check"></i>Chưa xác minh</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/admin/users/RequestIDCard"><i class="fas fa-user-clock"></i>Đang đợi bổ sung thông tin</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/admin/users/verified"><i class="fas fa-unlock"></i>Đã kích hoạt</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/admin/users/blocked"><i class="fas fa-user-lock"></i>Đã bị khóa</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/admin/users/disabled"><i class="fas fa-user-slash"></i>Đang bị vô hiệu hóa</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/admin/transactions">Quản lí giao dịch </a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav"> 
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user-circle"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/user"><i class="fas fa-id-card"></i> Thông tin tài khoản</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <!-- Content -->
+    {{{body}}}
+  </div>
+  <!-- Art -->
+  <div class="row d-flex flex-wrap justify-content-center" style="padding: 50px 0 50px 0; background-color:#F5FAFF">
+    <div class="col-sm-5">
+      <div><strong style="color: #407BFF;">Thanh toán mọi hóa đơn</strong></div>
+      <div><strong style="font-size: 50px;">Thanh toán mọi hóa đơn - đa dịch vụ</strong></div>
+      <p>EZB Việt Nam mang tới giải pháp toàn diện, nhờ đó quý nhà bán, hộ kinh doanh có thể thực hiện thanh toán mọi
+        loại hình hóa đơn, từ hóa dơn mua sắm, sử dụng dịch vụ tại cửa hàng tới thanh toán hóa đơn điện nước, Internet,
+        truyền hình... Bên cạnh đó, thông tin hoàn thành thanh toán cùng mọi biến động về số dư và chi tiết giao dịch sẽ
+        được thông báo đầy đủ ngay lập tức trên thiết bị của quý nhà bán lẫn của khách hàng.</p>
+      <p><i class="fas fa-check-circle"></i> <strong>Chấp nhận thanh toán mọi loại hình hóa đơn</strong></p>
+      <p><i class="fas fa-check-circle"></i> <strong>Uy tín, minh bạch, dễ dàng kiểm tra giao dịch và tình trạng hóa
+          đơn</strong></p>
+    </div>
+    <div class="col-sm-4"><img src="/assets/admin.png" width="100%"></div>
+  </div>
+  <!-- Bottom Nav Bar -->
+  <nav class="bot-nav navbar navbar-expand-lg navbar-light">
+    <div class="collapse navbar-collapse">
+      <nav class="nav flex-column mr-auto">
+        <img class="w-50" src="/assets/logo.png">
+        <div style="padding-left: 12px;">
+          <h4>CÔNG TY CỐ PHẦN MẠNG THANH TOÁN EZB VIỆT NAM</h4>
+          <p><i class="fa fa-home" aria-hidden="true"></i> <strong>Trụ sở chính:</strong> 19 Nguyễn Hữu Thọ, Phường Tân
+            Phong, Quận 7,
+            Thành phố Hồ Chí Minh</p>
+          <p><i class="fa fa-phone" aria-hidden="true"></i> <strong>Hotline:</strong> 06868686868</p>
+          <h6>Copyright <i class="fa fa-copyright" aria-hidden="true"></i> EZBWallet </h6>
+        </div>
+      </nav>
+      <nav class="nav flex-column col-sm-3">
+        <h4>Liên kết nhanh</h4>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/deposit">Nạp tiền</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/withdraw">Rút tiền</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/transfer">Chuyển tiền</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/history">Lịch sử giao dịch</a>
+        </li>
+      </nav>
+    </div>
+  </nav>
+    
+</body>
+  <script src="/main.js"></script>
+</html>

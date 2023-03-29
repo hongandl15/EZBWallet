@@ -1,0 +1,16 @@
+<div class="col-sm-6">
+    <form>
+        <h1 class="text-primary"><i class="fas fa-check-circle" style="font-size:30px;"></i> Mua thẻ thành công</h1>
+        <h6>Xem thông tin thẻ bên dưới</h6>
+        {{#each card}}
+        <div class="card-body">
+            <p class="card-text">Mã thẻ:<strong> {{cardcode}}</strong></p>
+            <p class="card-text">Mệnh giá:<strong> {{cardprice}}VNĐ</strong></p>
+        </div>
+        {{/each}}
+        <div>
+            <a class="btn btn-primary" href="/">Trang chủ</a>
+            <a class="btn btn-primary" href="/buycard">Mua tiếp</a>
+        </div>
+    </form>
+</div>

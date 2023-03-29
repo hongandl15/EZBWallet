@@ -1,0 +1,49 @@
+<div class="mt-4 w-75">
+  <h1 class=""> <img src="/assets/user.png"></img>USER LOGIN</h1>
+  <h5 class="mb-5" style="color:#58E1FF">Please login to access your account.</h5>
+  <form method="POST" action="/login">
+    <div class="form-group">
+        <label for="user">Username</label>
+        <div class="input-group mb-3">
+          <input id="username" name="username" type="text" class="form-control" placeholder="Username" value={{username}}>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label for="pass">Password</label>
+      <div class="input-group mb-3">
+        <input type="password" name="password" class="form-control" placeholder="Password">
+      </div>
+    </div>
+
+    {{#if error}}
+    <div class="form-group">
+      <div class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{error}}
+      </div>
+    </div>
+    {{/if}}
+    
+    {{#if success}}
+    <div class="form-group">
+      <div class="alert alert-success alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{success}}
+      </div>
+    </div>
+    {{/if}}
+    
+    <div class="form-group">
+      <p><a href="/recovery">Quên mật khẩu?</a></p>
+    </div>
+    <div class="form-group">
+      <button style="background-color:#58E1FF; border:none; border-radius:10px" class="btn btn-success w-100" type="submit">Login</button>
+    </div>
+    
+    <div class="form-group text-center">
+      <p>Don't have any account? <a href="/register">Register now!</a></p>
+    </div>
+  </form>
+</div>
+

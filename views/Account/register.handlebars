@@ -1,0 +1,45 @@
+<div class="mt-4 w-75">
+    <h1> <img src="/assets/user.png"></img>USER REGISTER</h1>
+    <h5 style="color:#58E1FF">Register your account.</h5>
+    <form role="form" enctype="multipart/form-data" method="post">
+        <div class="form-group">
+            <label for="fullname">Họ tên</label>
+            <input class="form-control" type="text" placeholder="Nhập tên người dùng" id="fullname" name="fullname" value="{{fullname}}" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Số điện thoại</label>
+            <input class="form-control" type="phone" placeholder="Nhập SĐT" id="phone" name="phone" value="{{phone}}" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" type="email" placeholder="Nhập email" id="email" name="email"  value="{{email}}"required>
+        </div>
+        <div class="form-group">
+            <label for="birthdate">Ngày sinh</label>
+            <input class="form-control" type="date" placeholder="Ngày sinh" value="{{birthdate}}" id="birthdate" name="birthdate"  required>
+        </div>
+        <div class="form-group">
+            <label for="address">Địa chỉ</label>
+            <input class="form-control" type="String" placeholder="Địa chỉ" id="address" name="address" value="{{address}}" required>
+        </div>
+        <div class="form-group">
+            <label for="photofront">Ảnh CMND mặt trước</label>
+            <input type="file" class="form-control pb-5"  accept="image/*" id="photofront" name="photofront">
+        </div>
+        <div class="form-group">
+            <label for="photoback">Ảnh CMND mặt sau</label>
+            <input type="file" class="form-control pb-5"  accept="image/*" id="photoback" name="photoback">
+        </div>
+        {{#if err}}
+        <div class="alert alert-danger">
+            {{err}}
+        </div>
+        {{/if}}
+        <div class="form-group">
+            <button style="background-color:#58E1FF; border:none; border-radius:10px" class="btn btn-success w-100" type="submit">Register</button>
+        </div>
+    </form>
+    <a href="/">Quay lại trang login</a>
+</div>
+
+

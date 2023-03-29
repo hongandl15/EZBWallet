@@ -1,0 +1,164 @@
+  <div class="row justify-content-center">
+    <div class="col-sm-6 col-md-5 col-lg-4">
+      <form>
+        <h2 class="text-primary"><i class="fas fa-history"></i> LỊCH SỬ GIAO DỊCH</h2>
+        <p>Chọn một giao dịch để xem chi tiết</p>
+        <table class="table table-striped border">
+          <thead>
+            <tr>
+              <th>Mã giao dịch</th>
+              <th>Loại giao dịch</th>
+              <th>Số tiền</th>
+              <th>Thời gian thực hiện</th>
+              <th>Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each usertrans}}
+            <tr>
+              <td><a href="/transaction/{{id}}">{{id}}</a></td>
+              <td>{{type}}</td>
+              <td>{{value}}</td>
+              <td>{{date}}</td>
+              <td>{{status}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </form>
+    </div>
+    <div class="col-sm-6 col-md-5 col-lg-4">
+      <div class="card" class="w-100">
+        <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title text-primary">{{fullname}}</h4>
+          <p class="card-text">User name: <strong>{{username}}</strong></p>
+          <p class="card-text">SĐT: <strong>{{phone}}</strong></p>
+          <p class="card-text">Địa chỉ: <strong>{{address}}</strong></p>
+          <p class="card-text">Ngày sinh: <strong>{{Birthdate}}</strong></p>
+          <p class="card-text">Số dư tài khoản: <strong id="money">{{balance}}</strong></p>
+          <p class="card-text">Trạng thái: <strong>{{status}}</strong></p>
+          {{#if verify}}
+          <button class="btn btn-success w-100 mr-2 mt-2" data-toggle="modal"
+            data-target="#exampleModal">{{verify}}</button>
+          {{/if}}
+          {{#if addinfo}}
+          <button class="btn btn-warning w-100 mr-2 mt-2" data-toggle="modal"
+            data-target="#exampleModaladdinfo">{{addinfo}}</button>
+          {{/if}}
+          {{#if disable}}
+          <button class="btn btn-danger w-100 mr-2 mt-2" data-toggle="modal"
+            data-target="#exampleModaldisable">{{disable}}</button>
+          {{/if}}
+          {{#if block}}
+          <button class="btn btn-danger w-100 mr-2 mt-2" data-toggle="modal"
+            data-target="#exampleModal">{{block}}</button>
+          {{/if}}
+
+        </div>
+      </div>
+      <p class="mt-3"><a href="#" onclick="history.back()">Quay lại</a></p>
+    </div>
+
+
+    {{#if idcard}}
+    <div class="col-sm-6 col-md-5 col-lg-4">
+      <div>CMND mặt trước
+        <img width="400px" height="300px" src='/photo/{{idcard.photofrontName}}.jpg' alt={{idcard.photofrontName}} />
+      </div>
+
+      <div>CMND mặt sau
+        <img width="400px" height="300px" src='/photo/{{idcard.photobackName}}.jpg' alt={{idcard.photobackName}} />
+      </div>
+    </div>
+    {{/if}}
+  </div>
+
+<div class="modal fade" id="exampleModaldisable" tabindex="-1" role="dialog" aria-labelledby="exampleModaldisableLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModaldisableLabel">Xác nhận</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Bạn có chắc chắn muốn vô hiệu hóa tài khoản này
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        {{#if disable}}
+        <form action="/admin/userprofile/{{username}}/disabled" method="post">
+          <button type="submit" class="btn btn-primary" data-toggle="modal"
+            data-target="#exampleModal">{{disable}}</button>
+        </form>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Xác nhận</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Bạn có chắc chắn thực hiện thao tác này
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        {{#if verify}}
+        <form action="/admin/userprofile/{{username}}/verified" method="post">
+          <button type="submit" class="btn btn-primary" data-toggle="modal"
+            data-target="#exampleModaldisable">{{verify}}</button>
+        </form>
+        {{/if}}
+
+        {{#if block}}
+        <form action="/admin/userprofile/{{username}}/blocked" method="post">
+          <button type="submit" class="btn btn-primary" data-toggle="modal"
+            data-target="#exampleModaldisable">{{block}}</button>
+        </form>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModaladdinfo" tabindex="-1" role="dialog" aria-labelledby="exampleModaladdinfoLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModaladdinfoLabel">Xác nhận</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Bạn có chắc chắn thực hiện thao tác này
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        {{#if addinfo}}
+        <form action="/admin/userprofile/{{username}}/RequestIDCard" method="post">
+          <button type="submit" class="btn btn-primary" data-toggle="modal"
+            data-target="#exampleModaladdinfo">{{addinfo}}</button>
+        </form>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

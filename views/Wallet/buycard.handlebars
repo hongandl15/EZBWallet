@@ -1,0 +1,38 @@
+<div class="col-sm-6">
+  <form method="post" action="/buycard">
+    <h1 class="text-primary"><i class="fas fa-money-check-alt"></i> Mua mã thẻ điện thoại</h1>
+    <div class="form-group row">
+      <label for="cardprice" class="col-sm-4 col-form-label"><strong>Chọn mệnh giá</strong></label>
+      <select class="form-control col-sm-4" name="cardprice" id="cardprice">
+        <option value='10000'>10.000 VNĐ</option>
+        <option value='20000'>20.000 VNĐ</option>
+        <option value='50000'>50.000 VNĐ</option>
+        <option value='100000'>100.000 VNĐ</option>
+      </select>
+    </div>
+    <div class="form-group row">
+      <label for="cardtype" class="col-sm-4 col-form-label"><strong>Chọn nhà mạng</strong></label>
+      <select class="form-control col-sm-4" name="cardtype" id="cardtype">
+        <option value='11111'>Viettel</option>
+        <option value='22222'>Mobifone</option>
+        <option value='33333'>Vinaphone</option>
+      </select>
+    </div>
+    <div class="form-group row">
+      <label for="amount" class="col-sm-4 col-form-label"><strong>Số lượng</strong></label>
+      <input class="form-control col-sm-4" type="number" placeholder="Nhập số lượng" id="amount" name="amount" max="5"
+        min="1">
+    </div>
+    {{#if error}}
+    <div class="form-group w-100 row">
+      <div class="alert alert-danger alert-dismissible fade show w-75">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{error}}
+      </div>
+    </div>
+    {{/if}}
+    <button class="btn btn-primary">Mua ngay</button>
+    
+  </form>
+    
+</div>

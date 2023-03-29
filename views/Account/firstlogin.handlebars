@@ -1,0 +1,23 @@
+<div class="p-5 mt-5 w-75">
+  <h4 class="modal-title">Đăng nhập lần đầu vui lòng đổi mật khẩu</h4>
+  <form method="post" action="/firstlogin">
+          <div class="form-group">
+              <label for="password">Password</label>
+              <input class="form-control" type="password" placeholder="Nhập Password" id="password" name="password">
+          </div>
+          <div class="form-group">
+              <label for="passwordconfirm">Confirm Password</label>
+              <input class="form-control" type="password" placeholder="Nhập lại Password" id="passwordconfirm" name="passwordconfirm">
+          </div>
+          {{#if error}}
+          <div class="alert alert-danger">
+              {{error}}
+          </div>
+          {{/if}}
+          <div class="form-group">
+            <button class="btn btn-success mr-2">Đổi mật khẩu</button>
+        </div>
+
+    <a href="/logout">Đăng xuất</a>
+
+</div>

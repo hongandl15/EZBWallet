@@ -1,0 +1,28 @@
+<div class="col-sm-6">
+    <form>
+        <h2 class="text-primary"><i class="fas fa-history"></i> LỊCH SỬ GIAO DỊCH</h2>
+        <p>Chọn một giao dịch để xem chi tiết</p>
+        <table class="table table-striped border">
+            <thead>
+                <tr>
+                    <th>Mã giao dịch</th>
+                    <th>Loại giao dịch</th>
+                    <th>Số tiền</th>
+                    <th>Thời gian thực hiện</th>
+                    <th>Trạng thái</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each trans}}
+                <tr>
+                    <td><a href="/transaction/{{id}}">{{id}}</a></td>
+                    <td>{{type}}</td>
+                    <td>{{value}}</td>
+                    <td>{{date}}</td>
+                    <td>{{status}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </form>
+</div>

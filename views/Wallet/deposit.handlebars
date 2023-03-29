@@ -1,0 +1,31 @@
+<div class="col-sm-6">
+  <form method="post" action="/deposit">
+    <h1 class="text-primary"><i class="fas fa-coins"></i></i> Nạp tiền vào tài khoản</h1>
+    <div class="form-group row">
+      <label for="cardnumber" class="col-sm-3 col-form-label"><strong>Số thẻ</strong></label>
+      <input class="form-control col-sm-5" type="number" placeholder="Nhập số thẻ" id="cardnumber" name="cardnumber">
+    </div>
+    <div class="form-group row">
+      <label for="expiredate" class="col-sm-3 col-form-label"><strong>Ngày hết hạn</strong></label>
+      <input class="form-control col-sm-5" type="date" placeholder="Nhập ngày hết hạn" id="expiredate" name="expiredate">
+    </div>
+    <div class="form-group row">
+      <label for="cvv" class="col-sm-3 col-form-label"><strong>CVV</strong></label>
+      <input class="form-control col-sm-5" type="number" placeholder="Nhập CVV" id="cvv" name="cvv">
+    </div>
+    <div class="form-group row">
+      <label for="money" class="col-sm-3 col-form-label"><strong>Số tiền muốn nạp</strong></label>
+      <input class="form-control col-sm-5" type="number" placeholder="Nhập số tiền muốn nạp" id="numberformat"
+        name="money">
+    </div>
+    {{#if error}}
+    <div class="form-group row">
+      <div class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{error}}
+      </div>
+    </div>
+    {{/if}}
+    <button class="btn btn-primary">Nạp tiền</button>
+  </form>
+</div>

@@ -1,0 +1,49 @@
+
+  <div class="image__background pt-20">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-sm-6 col-md-5 col-lg-4">
+        <div class="card" class="w-100">
+          <div class="card-body">
+            <p><a
+                href="#"
+                onclick="history.back()"
+                style="margin-left: 10px;"
+              ><i class="fa fa-arrow-left" aria-hidden="true"></i></a></p>
+            <h3 class="text-center text-uppercase">Transaction Details</h3>
+            <p class="card-text">Mã giao dịch: <strong>{{id}}</strong></p>
+            <p class="card-text">User name thực hiện:
+              <strong>{{username}}</strong></p>
+
+            {{#if receiver}}
+              <p class="card-text">Người nhận:
+                <strong>{{receiver}}</strong></p>
+            {{/if}}
+
+            <p class="card-text">Loại giao dịch: <strong>{{type}}</strong></p>
+            {{#if note}}
+              <p class="card-text">Ghi chú: <strong>{{note}}</strong></p>
+            {{/if}}
+            <p class="card-text">Ngày thực hiện: <strong>{{date}}</strong></p>
+            <p class="card-text">Tổng số tiền: <strong>{{value}}</strong></p>
+            {{#if creditcard}}
+              <p class="card-text">Số thẻ tín dụng:
+                <strong>{{creditcard}}</strong></p>
+            {{/if}}
+            <p class="card-text">Trạng thái: <strong>{{status}}</strong></p>
+            {{#if card}}
+              <p class="card-text">Mã thẻ:
+                <strong>{{card.cardcode}} </strong></p>
+            {{/if}}
+          </div>
+          {{#if verify}}
+            <form
+              action="/admin/transaction/{{id}}/{{verifytype}}"
+              method="post"
+            >
+              <button class="btn btn-success m-3">{{verify}}</button>
+            </form>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>

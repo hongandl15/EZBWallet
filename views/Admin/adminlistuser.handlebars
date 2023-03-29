@@ -1,0 +1,39 @@
+<div id="body__container">
+  <div class="p-10 bg-surface-secondary">
+    <div class="container-fluid mt-8">
+      <div class="card">
+        <div class="card-header">
+          <h2>Danh sách tài khoản {{type}}</h2>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped border">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Họ và tên</th>
+                <th scope="col">Email</th>
+                <th scope="col">SĐT</th>
+                <th scope="col">Ngày sinh</th>
+                <th scope="col">Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each users}}
+                <tr>
+                  <td><a
+                      href="/admin/userprofile/{{username}}"
+                    >{{username}}</a></td>
+                  <td>{{fullname}}</td>
+                  <td>{{email}}</td>
+                  <td>{{phone}}</td>
+                  <td>{{Birthdate}}</td>
+                  <td>{{status}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

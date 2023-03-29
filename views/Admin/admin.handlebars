@@ -1,0 +1,98 @@
+<div id="body__container">
+  <div class="p-10 bg-surface-secondary">
+    <div class="container-fluid mt-8">
+      <div class="card">
+        <div class="card-header">
+          <h2>Ví điện tử - admin</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5 mb-3">
+      <div class="row justify-content-center">
+
+        <div class="col-sm-6">
+          <div class="p-3 mb-2">
+            <div class="d-flex flex-row justify-content-center align-items-center service-item">
+              <i class="fas fa-user-check admin-service-icon"></i>
+              <a class="btn btn-service" href="/admin/users/unverified">
+                Danh sách tài khoản chưa xác minh</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="p-3 mb-2">
+            <div class="d-flex flex-row justify-content-center align-items-center service-item">
+              <i class="fas fa-user-clock admin-service-icon"></i>
+              <a class="btn btn-service" href="/admin/users/RequestIDCard">
+              Danh sách tài khoản đang đợi bổ sung thông tin</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="p-3 mb-2">
+            <div class="d-flex flex-row justify-content-center align-items-center service-item">
+              <i class="fas fa-unlock admin-service-icon" style="font-size: 50px;"></i>
+
+              <a class="btn btn-service" href="/admin/users/verified">Danh sách
+                tài khoản đã kích hoạt
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="p-3 mb-2">
+            <div class="d-flex flex-row justify-content-center align-items-center service-item">
+              <i class="fas fa-user-lock admin-service-icon"></i>
+              <a class="btn btn-service" href="/admin/users/blocked">Danh sách
+                tài khoản đã bị khóa</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="p-3 mb-2">
+            <div class="d-flex flex-row justify-content-center align-items-center service-item">
+              <i class="fas fa-user-slash admin-service-icon"></i>
+              <a class="btn btn-service" href="/admin/users/disabled">Danh sách
+                tài khoản đang bị vô hiệu hóa</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="p-3 mb-2">
+            <div class="d-flex flex-row justify-content-center align-items-center service-item">
+              <i class="fas fa-people-arrows admin-service-icon"></i>
+              <a class="btn btn-service" href="/admin/transactions">Quản lý giao
+                dịch</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    {{#if error}}
+    <div class="form-group">
+        <div id="error" class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{error}}
+        </div>
+    </div>
+    {{/if}}
+
+    {{#if success}}
+    <div class="form-group">
+        <div id="success" class="alert alert-success alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{success}}
+        </div>
+    </div>
+    {{/if}}
+
+  </div>
+</div>
