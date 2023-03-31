@@ -48,8 +48,8 @@ function sendmail(receiver, content, title){
         port: 465,
         secure: true,
         auth: {
-            user: 'ezbwallet@gmail.com', //Tài khoản gmail 
-            pass: 'wnbohmfbxzqnjtqn' //Mật khẩu tài khoản gmail
+            user: 'walletezb@gmail.com', //Tài khoản gmail 
+            pass: 'miiflqcjyblsxbti' //Mật khẩu tài khoản gmail
         },
         tls: {
             rejectUnauthorized: false
