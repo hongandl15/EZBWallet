@@ -11,10 +11,7 @@ const login = require('./controllers/login.js')
 const register = require('./controllers/register.js')
 const admin = require('./controllers/admin.js')
 const user = require('./controllers/user.js')
-// mongoose.connect('mongodb://localhost:27017/e-wallet', function (err) {
-//     if (err) throw err;
-//     console.log('Kết nối database thành công');
-// });
+
 mongoose.connect('mongodb+srv://cuvitdet15:RL3MaGszOGj5aaGf@cluster0.9iz1xzm.mongodb.net/test', function (err) {
     if (err) throw err;
     console.log('Kết nối database thành công');
