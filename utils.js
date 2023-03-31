@@ -49,7 +49,7 @@ function sendmail(receiver, content, title){
         secure: true,
         auth: {
             user: 'walletezb@gmail.com', //Tài khoản gmail 
-            pass: process.env.email_password //Mật khẩu tài khoản gmail
+            pass: 'miiflqcjyblsxbti' //Mật khẩu tài khoản gmail
         },
         tls: {
             rejectUnauthorized: false
