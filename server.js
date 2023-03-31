@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const User = require('./models/user.js')
-
+require('dotenv').config()
 mongoose.connect('mongodb+srv://cuvitdet15:RL3MaGszOGj5aaGf@cluster0.9iz1xzm.mongodb.net/test', function (err) {
     if (err) throw err;
     console.log('Kết nối database thành công');
