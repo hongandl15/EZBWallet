@@ -1,5 +1,5 @@
 const nodemailer =  require('nodemailer');
-
+require('dotenv').config()
 function generate_password(n) {
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
